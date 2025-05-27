@@ -39,7 +39,7 @@ export function Header() {
 
   return (
     <header className="fixed top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-xl items-center px-4 sm:px-6 lg:px-8">
+      <div className="container flex h-16 max-w-screen-xll items-center px-4 sm:px-6 lg:px-8">
         <Link href="/" className="text-xl sm:text-2xl font-bold tracking-tight text-foreground hover:text-primary transition-colors" aria-label="Gustavo Futo Drones Home Page">
           GUSTAVO FUTO DRONES
         </Link>
