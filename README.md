@@ -4,7 +4,7 @@ Este é um portfólio profissional desenvolvido com Next.js, React e TypeScript,
 A aplicação foi desenvolvida com foco em design minimalista, experiência imersiva e navegação fluida, especialmente voltada para mostrar vídeos e fotos com alta qualidade.
 
 🌐 Confira o site em produção:
-www.gustavofutodrones.com.br
+[www.gustavofutodrones.com.br](https://gustavo-futo-drone.netlify.app/)
 
 🚀 Tecnologias Utilizadas
 Next.js
@@ -72,7 +72,7 @@ Formulário de contato funcional.
 🌐 Deploy
 O projeto está disponível em produção no seguinte domínio:
 
-🔗 Em breve
+🔗 [Em breve](https://gustavo-futo-drone.netlify.app/)
 
 🤝 Contribuição
 Contribuições são sempre bem-vindas!
