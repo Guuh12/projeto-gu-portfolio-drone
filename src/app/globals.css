@@ -1,0 +1,88 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 7%; /* #121212 */
+    --foreground: 0 0% 100%; /* #FFFFFF */
+
+    --card: 0 0% 10%; /* #1A1A1A - for card backgrounds */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 7%; /* #121212 - consistent with background */
+    --popover-foreground: 0 0% 100%;
+
+    /* Primary colors are used for primary actions like buttons */
+    --primary: 0 0% 82.7%; /* #D3D3D3 - Accent color for buttons */
+    --primary-foreground: 0 0% 7%; /* #121212 - Text color on primary buttons for contrast */
+
+    /* Secondary colors for less prominent elements */
+    --secondary: var(--background); /* Match the main site background */
+    --secondary-foreground: 0 0% 100%; /* White text on secondary elements */
+
+    --muted: 0 0% 20%; /* #333333 - For muted backgrounds or elements */
+    --muted-foreground: 0 0% 70%; /* #B3B3B3 - For muted text, less emphasis */
+
+    /* Accent colors for hover states, borders, dividers etc. */
+    --accent: 0 0% 15%; /* #262626 - Subtle hover background on dark theme */
+    --accent-foreground: 0 0% 90%; /* #E6E6E6 - Lighter text for these accents */
+
+    --destructive: 0 84.2% 60.2%; /* Default destructive color */
+    --destructive-foreground: 0 0% 98%; /* Default destructive text color */
+
+    --border: 0 0% 15%; /* #262626 - For borders */
+    --input: 0 0% 15%; /* #262626 - For input backgrounds */
+    --ring: 0 0% 82.7%; /* #D3D3D3 - For focus rings, using accent color */
+
+    --chart-1: 0 0% 60%;
+    --chart-2: 0 0% 50%;
+    --chart-3: 0 0% 40%;
+    --chart-4: 0 0% 30%;
+    --chart-5: 0 0% 20%;
+
+    --radius: 0.5rem; /* Default border radius */
+  }
+
+  /* Since the app is designed to be dark, .dark variables mirror the root variables. */
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 82.7%;
+    --primary-foreground: 0 0% 7%;
+    --secondary: var(--background); /* Match the main site background */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 90%;
+    --destructive: 0 62.8% 30.6%; /* Standard dark theme destructive */
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 82.7%;
+    --chart-1: 0 0% 60%;
+    --chart-2: 0 0% 50%;
+    --chart-3: 0 0% 40%;
+    --chart-4: 0 0% 30%;
+    --chart-5: 0 0% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply scroll-smooth; /* For smooth scrolling on anchor links */
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-geist-sans); /* Ensure modern sans-serif font is applied */
+  }
+}
