@@ -8,7 +8,7 @@ const portfolioCategories = [
 		link: '/portfolio/videos',
 	},
 	{
-		title: 'Photos',
+		title: 'Fotos',
 		imageUrl: '/Capa-foto-animated.gif',
 		imageHint: 'drone photo',
 		link: '/portfolio/photos',

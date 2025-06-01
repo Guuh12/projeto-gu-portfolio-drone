@@ -1,8 +1,49 @@
-
 export default function VideosPage() {
   const vimeoBaseUrl = "https://player.vimeo.com/video/";
   const vimeoParams = "?color=D3D3D3&title=0&byline=0&portrait=0";
-  const placeholderVideoId = "716922262"; // Example Vimeo video ID
+
+  // Lista centralizada de todas as categorias e vídeos
+  const videoCategorias = [
+    {
+      categoria: 'Principais Trabalhos',
+      videos: [
+        {
+          url: 'https://vimeo.com/1089433292',
+          title: 'Trabalho Especial 1'
+        },
+        {
+          url: 'https://vimeo.com/1089431474',
+          title: 'Trabalho Especial 2'
+        },
+        {
+          url: 'https://vimeo.com/1089433300',
+          title: 'Trabalho Especial 3'
+        }
+      ]
+    },
+    {
+      categoria: 'Evento 2',
+      videos: [
+        {
+          url: 'https://vimeo.com/71692226211',
+          title: 'Event 1 - Video 1'
+        },
+        {
+          url: 'https://vimeo.com/71692226211',
+          title: 'Event 1 - Video 2'
+        }
+      ]
+    },
+    {
+      categoria: 'Evento 3',
+      videos: [
+        {
+          url: 'https://vimeo.com/71692226211',
+          title: 'Event 2 - Video 1'
+        }
+      ]
+    }
+  ];
 
   return (
     <main className="flex-grow">
@@ -14,7 +55,7 @@ export default function VideosPage() {
           </h2>
           <div className="aspect-video w-full max-w-3xl mx-auto rounded-lg overflow-hidden shadow-xl border border-border">
             <iframe
-              src={`${vimeoBaseUrl}716922262${vimeoParams}`}
+              src={`${vimeoBaseUrl}7169222627${vimeoParams}`}
               width="100%"
               height="100%"           
               allow="autoplay; fullscreen; picture-in-picture"
@@ -26,96 +67,42 @@ export default function VideosPage() {
         </div>
       </section>
 
-      {/* Section: Recordings made */}
-      <section className="w-full py-16 sm:py-24 bg-background">
-        <div className="container max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-center mb-12 text-foreground">
-            Evento 1
-          </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="aspect-video w-full rounded-lg overflow-hidden shadow-xl border border-border">
-              <iframe
-                src={`${vimeoBaseUrl}${placeholderVideoId}${vimeoParams}`}
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                className="rounded-lg"
-                title="Recording 1"
-              ></iframe>
-            </div>
-            <div className="aspect-video w-full rounded-lg overflow-hidden shadow-xl border border-border">
-              <iframe
-                src={`${vimeoBaseUrl}${placeholderVideoId}${vimeoParams}`}
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                className="rounded-lg"
-                title="Recording 2"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section: Event 1 */}
-      <section className="w-full py-16 sm:py-24 bg-background">
-        <div className="container max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-center mb-12 text-foreground">
-            Evento 2
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="aspect-video w-full rounded-lg overflow-hidden shadow-xl border border-border">
-              <iframe
-                src={`${vimeoBaseUrl}${placeholderVideoId}${vimeoParams}`}
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                className="rounded-lg"
-                title="Event 1 - Video 1"
-              ></iframe>
-            </div>
-            <div className="aspect-video w-full rounded-lg overflow-hidden shadow-xl border border-border">
-              <iframe
-                src={`${vimeoBaseUrl}${placeholderVideoId}${vimeoParams}`}
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                className="rounded-lg"
-                title="Event 1 - Video 2"
-              ></iframe>
+      {/* Renderiza todas as categorias e vídeos dinamicamente */}
+      {videoCategorias.map((cat, i) => (
+        <section key={i} className="w-full py-16 sm:py-24 bg-background">
+          <div className="container max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-center mb-12 text-foreground">
+              {cat.categoria}
+            </h2>
+            <div className={`grid ${cat.videos.length > 1 ? 'grid-cols-1 md:grid-cols-2 gap-8' : 'aspect-video w-full max-w-3xl mx-auto'} `}>
+              {cat.videos.map((video, idx) => {
+                // Extrai o ID e o hash (se houver) do link do Vimeo
+                const match = video.url.match(/vimeo.com\/(\d+)(?:\/(\w+))?/);
+                const videoId = match ? match[1] : null;
+                const hash = match && match[2] ? match[2] : null;
+                // Monta a URL do player, incluindo o hash se existir
+                const playerUrl = videoId
+                  ? `${vimeoBaseUrl}${videoId}${vimeoParams}${hash ? `&h=${hash}` : ''}`
+                  : video.url;
+                return (
+                  <div key={idx} className={cat.videos.length > 1 ? 'aspect-video w-full rounded-lg overflow-hidden shadow-xl border border-border' : ''}>
+                    <iframe
+                      src={playerUrl}
+                      width="100%"
+                      height="100%"
+                      frameBorder="0"
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      allowFullScreen
+                      className="rounded-lg"
+                      title={video.title}
+                    ></iframe>
+                  </div>
+                );
+              })}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Section: Event 2 */}
-      <section className="w-full py-16 sm:py-24 bg-background">
-        <div className="container max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-center mb-12 text-foreground">
-            Evento 3
-          </h2>
-          <div className="aspect-video w-full max-w-3xl mx-auto rounded-lg overflow-hidden shadow-xl border border-border">
-            <iframe
-              src={`${vimeoBaseUrl}${placeholderVideoId}${vimeoParams}`}
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-              className="rounded-lg"
-              title="Event 2 - Video 1"
-            ></iframe>
-          </div>
-        </div>
-      </section>
+        </section>
+      ))}
     </main>
   );
 }
