@@ -20,7 +20,7 @@ export function AboutMeSection() {
 
           <div className="w-full md:w-3/5 text-center md:text-left">
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4 text-foreground">
-              Sobre Mim
+              O que Eu Faço
             </h2>
             <h3 className="text-xl sm:text-2xl font-semibold text-primary mb-6">
               Sou Gustavo Futo | Piloto de Drone
@@ -30,7 +30,7 @@ export function AboutMeSection() {
                 Acredito que boas imagens têm o poder de contar histórias — e com um drone nas mãos, posso contá-las de um ângulo que poucas pessoas enxergam.
               </p>
               <p>
-                Tenho 22 anos e sou apaixonado por registrar momentos de forma leve, natural e cinematográfica. Meu estilo de voo é mais casual, ideal para eventos, produções criativas e vídeos institucionais com uma pegada moderna.
+                Sou apaixonado por registrar momentos de forma leve, natural e cinematográfica. Meu estilo de voo é mais casual, ideal para eventos, produções criativas e vídeos institucionais com uma pegada moderna.
               </p>
               <p>
                 Mais do que pilotar, gosto de observar, encontrar o melhor enquadramento e criar algo único a cada voo — com criatividade, sensibilidade e segurança.

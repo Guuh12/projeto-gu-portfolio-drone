@@ -8,17 +8,17 @@ interface ImageItem {
 }
 
 const generalPhotos: ImageItem[] = [
-  { src: "/Rio-de-janeiro-1.jpg", alt: "Photo 1", hint: "drone photography" },
-  { src: "/Embu-artes-1.jpg", alt: "Photo 2", hint: "aerial landscape" },
-  { src: "/Embu-artes-2.jpg", alt: "Photo 3", hint: "urban aerial" },
-  { src: "/Cenario-1-favela.jpg", alt: "Photo 4", hint: "drone portrait" },
-  { src: "https://placehold.co/600x400.png", alt: "Photo 5", hint: "event photography" },
-  { src: "https://placehold.co/600x400.png", alt: "Photo 6", hint: "commercial aerial" },
+  { src: "/Rio-de-janeiro-1.jpg", alt: "Photo 1", hint: "Praia Rio de Janeiro" },
+  { src: "/arraial-praia.jpg", alt: "Photo 2", hint: "Arraial do Cabo" },
+  { src: "/rio-raft.png", alt: "Photo 3", hint: "Rio de Raft esporte" },
+  { src: "/porto-image.png", alt: "Photo 4", hint: "Porto imagem aerea" },
+  { src: "/plantação-image.png", alt: "Photo 5", hint: "Plantação de Algo" },
+  { src: "/Cenario-1-favela.jpg", alt: "Photo 6", hint: "Favela Jaqueline" },
 ];
 
 const event1Photos: ImageItem[] = [
-  { src: "https://placehold.co/600x400.png", alt: "Event 1 Photo 1", hint: "event highlight" },
-  { src: "https://placehold.co/600x400.png", alt: "Event 1 Photo 2", hint: "event moment" },
+  { src: "/Embu-artes-1.jpg", alt: "Event 1 Photo 1", hint: "event highlight" },
+  { src: "/Embu-artes-2.jpg", alt: "Event 1 Photo 2", hint: "event moment" },
 ];
 
 const event2Photos: ImageItem[] = [
@@ -65,7 +65,7 @@ export default function PhotosPage() {
       <section className="w-full py-16 sm:py-24 bg-background border-t border-border/40">
         <div className="container max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-center mb-12 text-foreground">
-            Evento 1
+            Embu das Artes
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {event1Photos.map((image, index) => (

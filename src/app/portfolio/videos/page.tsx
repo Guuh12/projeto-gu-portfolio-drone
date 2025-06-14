@@ -8,7 +8,7 @@ export default function VideosPage() {
       categoria: 'Principais Trabalhos',
       videos: [
         {
-          url: 'https://vimeo.com/1089433292',
+          url: 'https://vimeo.com/1093355639',
           title: 'Trabalho Especial 1'
         },
         {
@@ -22,15 +22,15 @@ export default function VideosPage() {
       ]
     },
     {
-      categoria: 'Evento 2',
+      categoria: 'Rio de Janeiro',
       videos: [
         {
-          url: 'https://vimeo.com/71692226211',
-          title: 'Event 1 - Video 1'
+          url: 'https://vimeo.com/1093355639',
+          title: 'Rio de Janeiro - Video 1'
         },
         {
-          url: 'https://vimeo.com/71692226211',
-          title: 'Event 1 - Video 2'
+          url: 'https://vimeo.com/1089433300',
+          title: 'Rio de Janeiro - Video 2'
         }
       ]
     },
