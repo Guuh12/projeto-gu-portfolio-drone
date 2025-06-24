@@ -17,15 +17,13 @@ const generalPhotos: ImageItem[] = [
 ];
 
 const event1Photos: ImageItem[] = [
-  { src: "/Embu-artes-1.jpg", alt: "Event 1 Photo 1", hint: "event highlight" },
-  { src: "/Embu-artes-2.jpg", alt: "Event 1 Photo 2", hint: "event moment" },
+  { src: "/Embu-artes-1.jpg", alt: "Event 1 Photo 1", hint: "embu aereo 1" },
+  { src: "/Embu-artes-2.jpg", alt: "Event 1 Photo 2", hint: "embu aereo 2" },
 ];
 
 const event2Photos: ImageItem[] = [
-  { src: "https://placehold.co/600x400.png", alt: "Event 2 Photo 1", hint: "conference aerial" },
-  { src: "https://placehold.co/600x400.png", alt: "Event 2 Photo 2", hint: "group shot" },
-  { src: "https://placehold.co/600x400.png", alt: "Event 2 Photo 3", hint: "venue overview" },
-  { src: "https://placehold.co/600x400.png", alt: "Event 2 Photo 4", hint: "action shot" },
+  { src: "/parque-tambore-1.jpg", alt: "Event 2 Photo 1", hint: "Parque tambore aereo 1" },
+  { src: "/parque-tambore-2.jpg", alt: "Event 2 Photo 2", hint: "Parque tambore aereo 2" },
 ];
 
 const ImageCard: React.FC<{ image: ImageItem }> = ({ image }) => (
@@ -79,7 +77,7 @@ export default function PhotosPage() {
       <section className="w-full py-16 sm:py-24 bg-background border-t border-border/40">
         <div className="container max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-center mb-12 text-foreground">
-            Evento 2
+            Parque Tamboré
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {event2Photos.map((image, index) => (
