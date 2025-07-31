@@ -8,7 +8,7 @@ export function Footer() {
         <div className="flex flex-col items-center space-y-4">
           <div className="flex space-x-6">
             <Link 
-              href="https://instagram.com/gus_futo_drone" 
+              href="https://www.instagram.com/gustavofutodrone?igsh=b2wyZnY0aXI3eno=" 
               target="_blank" 
               rel="noopener noreferrer" 
               aria-label="Gustavo Yuri Instagram" 

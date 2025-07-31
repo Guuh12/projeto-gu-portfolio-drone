@@ -19,12 +19,12 @@ export function ContactSection() {
             </a>
           </Button>
           <Button asChild size="lg" variant="secondary" className="font-semibold px-8 py-3 text-base w-full sm:w-auto">
-            <a href="https://wa.me/11949115576" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5511949115576" target="_blank" rel="noopener noreferrer">
               <MessageSquare className="mr-2 h-5 w-5" /> Envie WhatsApp
             </a>
           </Button>
           <Button asChild size="lg" variant="secondary" className="font-semibold px-8 py-3 text-base w-full sm:w-auto">
-            <a href="https://ig.me/m/gus_futo_drone" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/gustavofutodrone?igsh=b2wyZnY0aXI3eno=" target="_blank" rel="noopener noreferrer">
               <Instagram className="mr-2 h-5 w-5" /> Envie Instagram
             </a>
           </Button>
@@ -38,7 +38,7 @@ export function ContactSection() {
           </p>
           <p className="flex items-center justify-center text-lg">
             <Phone className="mr-2 h-5 w-5 text-primary" />
-            <a href="tel:+11949115576" className="hover:text-primary transition-colors">
+            <a href="tel:+5511949115576" className="hover:text-primary transition-colors">
               11 94911-5576
             </a>
           </p>

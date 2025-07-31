@@ -49,9 +49,9 @@ export function Header() {
             {baseNavItems.map((item) => (
               <NavLink key={item.label} href={getFullHref(item.internalHref)}>{item.label}</NavLink>
             ))}
-            <a href="https://instagram.com/gus_futo_drone" target="_blank" rel="noopener noreferrer" aria-label="Gustavo Futo Instagram" className="text-foreground hover:text-primary transition-colors">
-              <Instagram size={20} />
-            </a>
+                    <a href="https://www.instagram.com/gustavofutodrone?igsh=b2wyZnY0aXI3eno=" target="_blank" rel="noopener noreferrer" aria-label="Gustavo Futo Instagram" className="text-foreground hover:text-primary transition-colors">
+          <Instagram size={20} />
+        </a>
           </nav>
         </div>
         {/* Mobile Navigation */}
@@ -71,10 +71,10 @@ export function Header() {
                    </SheetClose>
                 ))}
                  <SheetClose asChild>
-                    <a href="https://instagram.com/gus_futo_drone" target="_blank" rel="noopener noreferrer" aria-label="Gustavo Futo Instagram" className="flex items-center space-x-2 text-sm font-medium text-foreground hover:text-primary transition-colors pt-2" onClick={closeMobileMenu}>
-                      <Instagram size={20} />
-                      <span>Instagram</span>
-                    </a>
+                                  <a href="https://www.instagram.com/gustavofutodrone?igsh=b2wyZnY0aXI3eno=" target="_blank" rel="noopener noreferrer" aria-label="Gustavo Futo Instagram" className="flex items-center space-x-2 text-sm font-medium text-foreground hover:text-primary transition-colors pt-2" onClick={closeMobileMenu}>
+                <Instagram size={20} />
+                <span>Instagram</span>
+              </a>
                  </SheetClose>
               </nav>
             </SheetContent>
