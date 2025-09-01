@@ -26,6 +26,7 @@ export function Header() {
     { internalHref: '#about', label: 'Sobre' },
     { internalHref: '#portfolio', label: 'Portfolio' },
     { internalHref: '#contact', label: 'Contato' },
+    { internalHref: '#duvidas', label: 'Dúvidas' },
   ];
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
